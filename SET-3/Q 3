@@ -1,0 +1,19 @@
+import pandas as pd
+
+# Example data
+df = pd.DataFrame({
+    'month': ['January', 'February', 'March', 'April', 'May', 'June'],
+    'news_sold': [120, 150, 100, 80, 130, 110]
+})
+
+# Dictionary mapping month names to numbers
+month_to_num = {
+    'January': 1, 'February': 2, 'March': 3, 'April': 4,
+    'May': 5, 'June': 6, 'July': 7, 'August': 8,
+    'September': 9, 'October': 10, 'November': 11, 'December': 12
+}
+
+# Create a new column with month numbers
+df['month_number'] = df['month'].map(month_to_num)
+
+print(df)

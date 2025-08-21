@@ -1,0 +1,11 @@
+import pandas as pd
+
+# Example data
+df = pd.DataFrame({
+    'month': ['January', 'February', 'March', 'April', 'May', 'June'],
+    'news_sold': [120, 150, 100, 80, 130, 110]
+})
+
+# Calculate standard deviation
+std_dev = df['news_sold'].std()
+print(f"Standard Deviation of news_sold: {std_dev:.2f}")

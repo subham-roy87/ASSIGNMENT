@@ -1,0 +1,12 @@
+import pandas as pd
+
+# Example data
+df = pd.DataFrame({
+    'month': ['January', 'February', 'March', 'April', 'May', 'June'],
+    'news_sold': [120, 150, 100, 80, 130, 110]
+})
+
+# Sort by news_sold in ascending order and select the first three rows
+lowest_three = df.nsmallest(3, 'news_sold')
+
+print(lowest_three)

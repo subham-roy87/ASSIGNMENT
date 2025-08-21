@@ -1,0 +1,12 @@
+import pandas as pd
+
+# Example data (replace with your actual DataFrame)
+df = pd.DataFrame({
+    'month': ['January', 'February', 'March', 'April', 'May', 'June'],
+    'news_sold': [120, 150, 100, 80, 130, 110]
+})
+
+# Add cumulative_sales column
+df['cumulative_sales'] = df['news_sold'].cumsum()
+
+print(df)

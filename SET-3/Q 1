@@ -1,0 +1,20 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Example data: replace this with your actual data loading
+# df = pd.read_csv('your_data.csv')
+# For demonstration, let's create sample data:
+df = pd.DataFrame({
+    'month': ['January', 'February', 'March', 'April', 'May', 'June'],
+    'news_sold': [120, 150, 100, 80, 130, 110]
+})
+
+# Group by month and sum news sold (if needed)
+monthly_totals = df.groupby('month')['news_sold'].sum()
+
+# Pie chart
+plt.figure(figsize=(8, 8))
+plt.pie(monthly_totals, labels=monthly_totals.index, autopct='%1.1f%%', startangle=90)
+plt.title('Proportion of Total News Sold by Month')
+plt.axis('equal')  # Equal aspect ratio ensures pie is drawn as a circle.
+plt.show()
